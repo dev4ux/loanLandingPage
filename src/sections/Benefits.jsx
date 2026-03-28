@@ -13,7 +13,7 @@ const ICON_MAP = { ShieldCheck, Zap, Settings, BadgeCheck, Smartphone, Lock };
 
 export default function Benefits() {
   return (
-    <section id="benefits" className="py-24 lg:py-32 bg-brand-950 relative overflow-hidden">
+    <section id="benefits" className="py-24 lg:py-32 bg-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-600/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -23,7 +23,7 @@ export default function Benefits() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="inline-block text-xs font-black tracking-[0.3em] text-brand-400 uppercase mb-4"
+            className="inline-block text-xs font-black tracking-[0.3em] text-brand-600 uppercase mb-4"
           >
             Why Choose Us
           </motion.span>
@@ -31,9 +31,9 @@ export default function Benefits() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-text-primary mb-6"
           >
-            Built for <span className="text-brand-400">Your Peace of Mind</span>
+            Built for <span className="text-brand-600">Your Peace of Mind</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -58,15 +58,15 @@ export default function Benefits() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="glass-card p-10 rounded-[2.5rem] group hover:border-brand-400/30 transition-all duration-500"
+                className="glass-card p-10 rounded-[2.5rem] group hover:border-brand-600/30 transition-all duration-500"
               >
-                <div className="w-16 h-16 rounded-2xl bg-brand-600/10 flex items-center justify-center mb-8 border border-brand-600/20 group-hover:bg-brand-600 transform group-hover:rotate-6 transition-all duration-500">
-                  <Icon className="w-8 h-8 text-brand-400 group-hover:text-black transition-colors" />
+                <div className="w-16 h-16 rounded-2xl bg-brand-50 flex items-center justify-center mb-8 border border-brand-100 group-hover:bg-brand-600 transform group-hover:rotate-6 transition-all duration-500">
+                  <Icon className="w-8 h-8 text-brand-600 group-hover:text-white transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-brand-400 transition-colors">
+                <h3 className="text-xl font-bold text-text-primary mb-4 group-hover:text-brand-600 transition-colors">
                   {benefit.title}
                 </h3>
-                <p className="text-text-secondary leading-relaxed group-hover:text-white/80 transition-colors">
+                <p className="text-text-secondary leading-relaxed group-hover:text-text-primary transition-colors">
                   {benefit.description}
                 </p>
               </motion.div>

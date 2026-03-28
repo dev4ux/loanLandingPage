@@ -49,7 +49,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section id="faq" className="py-24 lg:py-32 bg-brand-950 relative overflow-hidden">
+    <section id="faq" className="py-24 lg:py-32 bg-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-600/5 rounded-full blur-[120px] pointer-events-none" />
 
@@ -60,7 +60,7 @@ export default function FAQ() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="inline-block text-xs font-black tracking-[0.3em] text-brand-400 uppercase mb-4"
+            className="inline-block text-xs font-black tracking-[0.3em] text-brand-600 uppercase mb-4"
           >
             Support Center
           </motion.span>
@@ -68,9 +68,9 @@ export default function FAQ() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-6"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-text-primary mb-6"
           >
-            Common <span className="text-brand-400">Questions</span>
+            Common <span className="text-brand-600">Questions</span>
           </motion.h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             Everything you need to know about our personal loan process.
@@ -85,13 +85,13 @@ export default function FAQ() {
           className="space-y-4"
         >
           {FAQ_DATA.map((item, i) => (
-            <div key={i} className="glass-nav rounded-2xl border border-white/5 overflow-hidden transition-all duration-300 hover:border-brand-400/20">
+            <div key={i} className="bg-white rounded-2xl border border-brand-100 overflow-hidden transition-all duration-300 hover:border-brand-600/20 shadow-sm">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? -1 : i)}
                 className="w-full flex items-center justify-between p-6 text-left group"
               >
                 <span className={`text-base font-black uppercase tracking-widest transition-colors pr-6 ${
-                  openIndex === i ? 'text-brand-400' : 'text-white'
+                  openIndex === i ? 'text-brand-600' : 'text-text-primary'
                 }`}>
                   {item.question}
                 </span>
@@ -99,7 +99,7 @@ export default function FAQ() {
                   animate={{ rotate: openIndex === i ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                   className={`shrink-0 w-10 h-10 rounded-xl flex items-center justify-center transition-all ${
-                    openIndex === i ? 'bg-brand-600 text-black shadow-lg shadow-brand-600/20' : 'bg-white/5 text-brand-400'
+                    openIndex === i ? 'bg-brand-600 text-white shadow-lg shadow-brand-600/20' : 'bg-brand-50 text-brand-600'
                   }`}
                 >
                   <ChevronDown className="w-5 h-5" />
@@ -114,7 +114,7 @@ export default function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="px-6 pb-6 text-text-secondary leading-relaxed border-t border-white/5 pt-6 text-sm">
+                    <div className="px-6 pb-6 text-text-secondary leading-relaxed border-t border-brand-50 pt-6 text-sm">
                       {item.answer}
                     </div>
                   </motion.div>

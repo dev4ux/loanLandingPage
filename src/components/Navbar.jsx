@@ -23,10 +23,10 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2.5 group">
             <div className="w-10 h-10 rounded-xl bg-brand-600 flex items-center justify-center shadow-lg shadow-brand-600/20 group-hover:scale-105 transition-transform">
-              <span className="text-black font-black text-sm">SL</span>
+              <span className="text-white font-black text-sm">SL</span>
             </div>
-            <span className="text-2xl font-black text-white tracking-tighter">
-              Sabka<span className="text-brand-400">Loan</span>
+            <span className="text-2xl font-black text-text-primary tracking-tighter">
+              Sabka<span className="text-brand-600">Loan</span>
             </span>
           </a>
 
@@ -36,7 +36,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-xs font-black text-white/70 hover:text-brand-400 transition-colors uppercase tracking-[0.2em]"
+                className="text-xs font-black text-text-secondary hover:text-brand-600 transition-colors uppercase tracking-[0.2em]"
               >
                 {link.label}
               </a>
@@ -56,7 +56,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-white hover:text-brand-400 transition-colors"
+            className="lg:hidden p-2 text-text-primary hover:text-brand-600 transition-colors"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -73,7 +73,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="lg:hidden bg-brand-950 border-t border-white/5 overflow-hidden"
+            className="lg:hidden bg-white border-t border-brand-100 overflow-hidden"
             role="dialog"
             aria-label="Mobile navigation"
           >
@@ -86,7 +86,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-4 rounded-xl text-lg font-black text-white hover:text-brand-400 hover:bg-white/5 transition-all uppercase tracking-widest"
+                  className="block px-4 py-4 rounded-xl text-lg font-black text-text-primary hover:text-brand-600 hover:bg-brand-50 transition-all uppercase tracking-widest"
                 >
                   {link.label}
                 </motion.a>

@@ -9,13 +9,13 @@ export default function StickyMobileCTA() {
       transition={{ delay: 1.5, duration: 0.5 }}
       className="fixed bottom-0 left-0 right-0 z-40 lg:hidden px-4 pb-6"
     >
-      <div className="glass-nav rounded-2xl border border-white/10 p-3 shadow-2xl">
+      <div className="bg-white/95 backdrop-blur-lg rounded-2xl border border-brand-100 p-3 shadow-2xl shadow-brand-900/10">
         <a
           href="#hero-form"
-          className="btn-primary flex items-center justify-center gap-3 w-full py-4 rounded-xl text-base font-black uppercase tracking-widest shadow-xl shadow-brand-600/20"
+          className="btn-primary flex items-center justify-center gap-3 w-full py-4 rounded-xl text-base font-black uppercase tracking-widest"
         >
           Apply Now
-          <ArrowRight className="w-5 h-5 text-black" />
+          <ArrowRight className="w-5 h-5 text-white" />
         </a>
       </div>
     </motion.div>

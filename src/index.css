@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* Official SabkaLoan Branding */
-  --color-brand-50: #f0f7ec;
-  --color-brand-100: #dceccf;
-  --color-brand-200: #b9db9e;
-  --color-brand-300: #96ca6d;
-  --color-brand-400: #8bbf66; /* Lime Green Highlight */
-  --color-brand-500: #7fb459;
-  --color-brand-600: #8bbf66; /* Main CTA/Brand Color */
-  --color-brand-700: #5d8e3d;
-  --color-brand-800: #466b2e;
-  --color-brand-900: #2f471e;
-  --color-brand-950: #04091e; /* Core Background */
+  /* Warm Premium Fintech Branding */
+  --color-brand-50: #fffbf7; /* Warm Cream Background */
+  --color-brand-100: #fef3c7;
+  --color-brand-200: #fde68a;
+  --color-brand-300: #fcd34d;
+  --color-brand-400: #fbbf24;
+  --color-brand-500: #f59e0b;
+  --color-brand-600: #4f46e5; /* Professional Indigo Primary */
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b; /* Deep Indigo for Darker Sections */
 
-  --color-accent-400: #8bbf66;
-  --color-accent-500: #8bbf66;
-  --color-accent-600: #7fb459;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #f59e0b;
+  --color-accent-600: #d97706; /* Golden Amber Secondary */
 
-  --color-surface: #04091e;
-  --color-surface-soft: #0a1128;
-  --color-surface-alt: #0d1633;
+  --color-surface: #fffbf7;
+  --color-surface-soft: #ffffff;
+  --color-surface-alt: #f8fafc;
 
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #a0aec0;
-  --color-text-muted: #606060;
+  --color-text-primary: #0f172a; /* High Contrast Slate */
+  --color-text-secondary: #475569;
+  --color-text-muted: #94a3b8;
 
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -60,31 +60,32 @@ body {
   background: var(--color-surface);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-brand-300);
+  background: var(--color-brand-600);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-500);
+  background: var(--color-brand-700);
 }
 
-/* Glass card utility */
+/* Glass card utility - Updated for Light Theme */
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 }
 
 .glass-nav {
-  background: rgba(4, 9, 30, 0.85);
+  background: rgba(255, 251, 247, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
 }
 
 /* Gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-brand-400) 0%, #ffffff 100%);
+  background: linear-gradient(135deg, var(--color-brand-600) 0%, var(--color-accent-600) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -115,30 +116,30 @@ body {
   animation: float-delayed 10s ease-in-out infinite;
 }
 
-/* Button & Card Styles */
+/* Button & Card Styles - Updated for Light Theme */
 .btn-primary {
   background-color: var(--color-brand-600);
-  color: #000000;
-  font-weight: 800;
+  color: #ffffff;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.05em;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.3);
 }
 
 .btn-primary:hover {
-  background-color: #ffffff;
+  background-color: var(--color-accent-600);
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px -5px rgba(139, 191, 102, 0.3);
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.3);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.02);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
 }
 
 /* Marquee Animation */
